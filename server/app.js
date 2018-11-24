@@ -5,9 +5,9 @@ const schema = require('./schema/schema');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-mongoose.connect("mongodb://clive:test123@ds163680.mlab.com:63680/gql-books");
+mongoose.connect("mongodb://cabinet:cabinet123@ds147361.mlab.com:47361/jamaican-cabinet");
 mongoose.connection.once('open', ()=> {
-  console.log('database connected');
+  console.log('Cabinet database connected');
 });
 
 //allow cross-origin requests
