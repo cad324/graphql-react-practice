@@ -38,8 +38,6 @@ const MinisterType = new GraphQLObjectType({
   })
 });
 
-var ministers = [{name: 'Karl Samuda', id: '1', title: 'Minister without Portfolio', bio: 'Soon tell you...'}];
-
 const AuthorType = new GraphQLObjectType({
   name: 'Author',
   fields: () => ({
