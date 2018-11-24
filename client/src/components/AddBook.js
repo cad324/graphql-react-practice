@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {gql} from 'apollo-boost';
 import {graphql, compose} from 'react-apollo';
-import {getAuthorsQuery, addBookMutation} from '../queries/queries';
+import {getAuthorsQuery, addBookMutation, getBookQuery} from '../queries/queries';
 
 class AddBook extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class AddBook extends Component {
 
   displayAuthor() {
     var data = this.props.getAuthorsQuery;
-    console.log(data);
+    // console.log(data);
     if (data.loading) {
       return(<option disabled>Loading authors...</option>);
     } else {
@@ -27,7 +27,14 @@ class AddBook extends Component {
 
   submitForm(e) {
     e.preventDefault();
-    this.props.addBookMutation();
+    this.props.addBookMutation({
+      variables: {
+        name: this.state.name,
+        genre: this.state.genre,
+        authorID: this.state.authorID
+      },
+      refetchQueries: [{query: getBookQuery}]
+    });
   }
 
   render() {
