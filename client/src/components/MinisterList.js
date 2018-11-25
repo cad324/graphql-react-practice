@@ -24,7 +24,6 @@ class MinisterList extends Component {
     }
   }
   render() {
-    console.log("State is "+this.state.selected);
     return (
       <div>
         <ul id="minister-list">

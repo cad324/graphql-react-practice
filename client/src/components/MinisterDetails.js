@@ -5,7 +5,9 @@ import {getMinisterQuery} from '../queries/queries';
 class MinisterDetails extends Component {
   displayMinisterDetails() {
     const {minister} = this.props.data;
+    console.log(this.props.data.minister);
     if (minister) {
+      console.log("Enters minister condition");
       return(
         <div>
           <h2>{minister.name}</h2>
@@ -15,13 +17,13 @@ class MinisterDetails extends Component {
         </div>
       )
     } else {
+      console.log("Does not enters minister condition");
       return (
         <div>No minister selected</div>
       )
     }
   }
   render() {
-    console.log(this.props);
     return (
       <div id="minister-details">
         {this.displayMinisterDetails()}
