@@ -112,14 +112,14 @@ const Mutation = new GraphQLObjectType({
       args: {
         name: {type: new GraphQLNonNull(GraphQLString)},
         title: {type: new GraphQLNonNull(GraphQLString)},
-        bio: {type: new GraphQLNonNull(GraphQLString)}
+        bio: {type: new GraphQLNonNull(GraphQLString)},
       },
       resolve(parent, args) {
         let minister = new Minister({
           name: args.name,
           title: args.title,
           bio: args.bio,
-          id: args.id
+          id: args.title
         });
         return minister.save();
       }
