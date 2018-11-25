@@ -118,8 +118,7 @@ const Mutation = new GraphQLObjectType({
         let minister = new Minister({
           name: args.name,
           title: args.title,
-          bio: args.bio,
-          id: args.title
+          bio: args.bio
         });
         return minister.save();
       }
