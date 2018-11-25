@@ -17,7 +17,6 @@ class App extends Component {
         <div id="main">
           <h1>Jamaica Government Ministers</h1>
           <MinisterList/>
-          <MinisterDetails/>
         </div>
       </ApolloProvider>
     );
