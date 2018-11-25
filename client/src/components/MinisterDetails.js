@@ -23,7 +23,7 @@ class MinisterDetails extends Component {
   render() {
     console.log(this.props);
     return (
-      <div id="book-details">
+      <div id="minister-details">
         {this.displayMinisterDetails()}
       </div>
     );

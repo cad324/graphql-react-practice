@@ -27,7 +27,7 @@ class MinisterList extends Component {
     console.log("State is "+this.state.selected);
     return (
       <div>
-        <ul id="book-list">
+        <ul id="minister-list">
           {this.displayMinisters()}
         </ul>
         <MinisterDetails ministerId={this.state.selected}/>
